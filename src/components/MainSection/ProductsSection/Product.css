@@ -1,0 +1,38 @@
+.card-body img{
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+}
+
+.product-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;  /* limit to 2 lines */
+    height: 42px;
+}
+
+.product-description{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;  /* limit to 5 lines */
+    height: 125px;
+}
+
+.card .fas{
+    color: #edf109;
+}
+
+.btn{
+    background-color: red;
+    transition: 0.2s;
+}
+
+.btn:hover{
+    transform: scale(1.1, 1.1);
+    background-color: red;
+    transition: 0.2s;
+}

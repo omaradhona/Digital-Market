@@ -1,0 +1,33 @@
+.searchbar{
+    height: 30px;
+    background-color: #353b48; 
+}
+  
+.search_input{
+    outline: 0;
+    width: 400px;
+}
+  
+.search_icon{
+    color: white;
+    transition: 0.3s;
+}
+  
+.search_icon:hover{
+    color: red;
+    transition: 0.3s;
+}
+
+.views span{
+    cursor: pointer;
+}
+
+.views i{
+    margin-right: 6px;
+    display: inline-block;
+    vertical-align: 2px;
+}
+
+.views span:hover{
+    color: red;
+}

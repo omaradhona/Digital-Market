@@ -1,0 +1,26 @@
+.categories{
+    background-color: #1e1f26;
+  }
+  
+  .categories > div{
+    border-bottom: 3px solid #1e1f26;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .categories > div:hover{
+    background-color: #393a40;
+    transform: translate(0px, -4px);
+    border-bottom: 3px solid red;
+    transition: 0.2s;
+  }
+  
+  .stock{
+    position: relative;
+    left: 15px;
+    border: 1px solid red;
+    border-radius: 10px;
+    color: red;
+    font-size: 12px;
+  }
