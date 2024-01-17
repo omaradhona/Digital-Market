@@ -18,7 +18,7 @@ export function MainSection(props){
                 tolist={props.tolist}
             />
                     
-            <div className="row mt-5" ref={productsContainer}>
+            <div className="row mt-5 d-flex justify-content-center" ref={productsContainer}>
                 <ProductsSection 
                     products={props.products}
                     category={props.category}

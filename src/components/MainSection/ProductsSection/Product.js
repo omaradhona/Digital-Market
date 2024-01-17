@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Stars } from "../../FiltersSection/FilterRatings/FiveStars/Stars";
+import { Link } from "react-router-dom";
 import "./Product.css";
 
 export function Product(props){
@@ -27,6 +28,7 @@ export function Product(props){
                         </div>
                         <div className="pt-3">
                             <h6 className="font-weight-bold product-title">{props.title}</h6>
+                            <Link to={"/pages/Shop/" + props.id} className="font-weight-bold product-title">{props.title}</Link>
                             <div className="text-muted product-description">{props.description}</div>
                         </div>
                         <div className="d-flex align-items-center pt-3">
@@ -52,7 +54,7 @@ export function Product(props){
     }
     else if(props.view==="crammed"){
         return (
-            <div className="col-lg-3 col-md-6 col-sm-10 pb-2">
+            <div className="crammed col-lg-3 col-md-6 col-sm-10 pb-2">
                 <div className="card">
                     <div className="card-body">
                         <div className="text-center">
@@ -70,7 +72,7 @@ export function Product(props){
     }
     else if(props.view==="list"){
         return (
-            <div className="col-lg-12 col-md-6 col-sm-10 pb-2">
+            <div className="list col-lg-12 col-md-6 col-sm-10 pb-2">
                 <div className="card">
                     <div className="card-body d-flex">
                         <div className="col-lg-3 d-flex justify-content-center align-items-center">

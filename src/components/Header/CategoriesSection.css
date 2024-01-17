@@ -1,22 +1,27 @@
-.categories{
+  .categories{
     background-color: #1e1f26;
   }
   
-  .categories > div{
-    border-bottom: 3px solid #1e1f26;
+  .categories > a{
+    border-bottom: 3px solid transparent;
     font-weight: 500;
-    cursor: pointer;
+    text-decoration: none;
     transition: 0.2s;
   }
   
-  .categories > div:hover{
+  .categories > .inactive:hover{
     background-color: #393a40;
     transform: translate(0px, -4px);
     border-bottom: 3px solid red;
     transition: 0.2s;
   }
-  
-  .stock{
+
+  .categories > .is-active{
+    background-color: red;
+
+  }
+
+  .stock.inactive{
     position: relative;
     left: 15px;
     border: 1px solid red;
@@ -24,3 +29,18 @@
     color: red;
     font-size: 12px;
   }
+
+  .stock.is-active{
+    position: relative;
+    left: 15px;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+  }
+
+  /*
+  backgroundColor: props.isActive ? "red" : "",
+  color: props.isActive ? "white" : "",
+  borderColor: props.isActive ? "white" : "",
+  */

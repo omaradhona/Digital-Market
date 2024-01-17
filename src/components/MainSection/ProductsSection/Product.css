@@ -26,12 +26,12 @@
     color: #edf109;
 }
 
-.btn{
+.grid .btn, .list .btn, .crammed .btn{
     background-color: red;
     transition: 0.2s;
 }
 
-.btn:hover{
+.grid .btn:hover, .list .btn:hover, .crammed .btn:hover{
     transform: scale(1.1, 1.1);
     background-color: red;
     transition: 0.2s;

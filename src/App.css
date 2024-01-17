@@ -3,4 +3,58 @@
 -------------------------------------------------------------------------------------------------------------*/
 
 
+nav a{
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
 
+.navbar-nav a:hover{
+    border-bottom: 2px solid white;
+    transition: 0.3s;
+}
+
+.site-title{
+    font-size: 25px;
+}
+
+@media screen and (max-width: 576px){
+    .navbar-nav{
+        text-align: center;
+    }
+    .navbar-nav a{
+        color: black;
+        background-color: antiquewhite;
+        margin: 4px 0;
+        border-radius: 4px;
+    }
+}
+
+/*
+@media screen and (max-width: 600px) {
+    nav{
+        
+        text-align: center;
+        
+    }
+    .site-logo{
+        
+        
+        display: none;
+    }
+    ul{
+        gap: 0px;
+        width: 100%;
+        
+    }
+    li a{
+        background-color: black;
+        display: block;
+        width: 100%;
+    }
+    li a:hover{
+        background-color: darkgray;
+    }
+    
+  }*/

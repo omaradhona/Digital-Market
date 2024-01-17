@@ -9,6 +9,7 @@ export function ProductsSection(props){
                     product.rating.rate >= props.minRate).map(product =>
                         <Product
                             key={product.id}
+                            id={product.id}
                             image={product.image}
                             title={product.title}
                             description={product.description}
