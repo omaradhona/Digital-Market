@@ -8,5 +8,12 @@
 }
 
 .single-product img{
-    width: 50%;
+    width: 200px;
 }
+
+
+
+/*.product-images img{
+    width: 50px;
+    margin-bottom: 8px;
+}*/

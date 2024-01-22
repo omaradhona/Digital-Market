@@ -20,15 +20,15 @@ export function Product(props){
 
     if(props.view==="grid"){
         return (
-            <div className="grid col-lg-4 col-md-6 col-sm-10 pb-2">
+            <div className="grid col-lg-4 col-sm-6 pb-2">
                 <div className="card">
                     <div className="card-body">
                         <div className="text-center">
                             <img className="img-top" src={props.image} alt="" />
                         </div>
                         <div className="pt-3">
-                            <h6 className="font-weight-bold product-title">{props.title}</h6>
-                            <Link to={"/pages/Shop/" + props.id} className="font-weight-bold product-title">{props.title}</Link>
+                            <Link to={"/pages/Shop/" + props.id} className="product-link"><h6 className="font-weight-bold product-title">{props.title}</h6></Link>
+                            
                             <div className="text-muted product-description">{props.description}</div>
                         </div>
                         <div className="d-flex align-items-center pt-3">

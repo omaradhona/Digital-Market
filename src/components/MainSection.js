@@ -1,6 +1,7 @@
 import { useRef, useEffect } from "react";
 import { ResultsHeader } from "./MainSection/ResultsHeader";
 import { ProductsSection } from "./MainSection/ProductsSection";
+import "./MainSection.css";
 
 export function MainSection(props){
     const productsContainer = useRef(null);
@@ -18,7 +19,7 @@ export function MainSection(props){
                 tolist={props.tolist}
             />
                     
-            <div className="row mt-5 d-flex justify-content-center" ref={productsContainer}>
+            <div className="row mt-5 d-flex products-section" ref={productsContainer}>
                 <ProductsSection 
                     products={props.products}
                     category={props.category}

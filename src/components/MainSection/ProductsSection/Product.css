@@ -13,6 +13,15 @@
     height: 42px;
 }
 
+.product-link{
+    text-decoration: none;
+    color: black;
+}
+
+.product-link:hover{
+    color: blue;
+}
+
 .product-description{
     overflow: hidden;
     text-overflow: ellipsis;
