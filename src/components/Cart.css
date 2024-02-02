@@ -1,0 +1,30 @@
+
+
+.cart{
+    height: 80vh;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: black;
+    color: white;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.cart-img{
+    
+     
+    
+}
+
+
+.cart i, .cart-price-qty{
+    font-size: 13px;
+}
+
+.cart-items{
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+

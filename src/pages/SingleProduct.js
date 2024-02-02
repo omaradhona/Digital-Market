@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { FiveStars } from "../components/FiltersSection/FilterRatings/FiveStars";
+import { Review } from "./SingleProduct/Review";
 import "./SingleProduct.css"
 
 export function SingleProduct(props){
@@ -22,6 +23,12 @@ export function SingleProduct(props){
         
     }, [])
 
+    useEffect(() => {
+        if(btnRef.current){
+            btnRef.current.disabled = true;
+        }
+    }, [btnRef.current])
+
     function minusQty(){
         if(quantity > 1){
             setQuantity(quantity - 1);
@@ -40,6 +47,8 @@ export function SingleProduct(props){
         
     }
     
+    
+
     if(singleProduct){
         return (
         
@@ -79,6 +88,28 @@ export function SingleProduct(props){
                                     Add to cart
                                 </button>
                             </div>
+
+                            <div id="demo" class="carousel slide d-flex mt-2" data-bs-ride="carousel" data-bs-interval="5000">
+                                <div class="carousel-inner p-2">
+                                    <div class="carousel-item active px-5">
+                                        <Review />
+                                    </div>
+                                    <div class="carousel-item px-5">
+                                        <Review />
+                                    </div>
+                                    <div class="carousel-item px-5">
+                                        <Review />
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+
                         </div>
                     </div>
                 </div>

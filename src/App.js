@@ -1,15 +1,24 @@
-import { Link, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { Shop } from './pages/Shop';
 import { Home } from './pages/Home';
 import { SingleProduct } from './pages/SingleProduct';
+import { Navbar } from './components/Navbar';
+import { Cart } from './components/Cart';
 import "./App.css";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [forceUpdate, setForceUpdate] = useState(false);
+  const [totalPrice, setTotalPrice] = useState(0);
 
+  useEffect(() => {
+    let total = 0;
+    cartItems.map(item => total += (item.price * item.quantity))
+    setTotalPrice(total)
+  }, [cartItems, forceUpdate])
+  
   function updateCart(addedItem, quantity){
     const updatedcartItems = cartItems.map((item, i) => {
       if(item.id === addedItem.id){
@@ -31,26 +40,29 @@ function App() {
     
     
   }
+
   console.log(cartItems)
+  
+  
+
   return (
     <>
-
-      <nav className="navbar navbar-expand-sm bg-danger">
-        <div className="container-fluid align-items-stretch">
-          <Link to="/pages/Home" className="site-title fw-bold">E-commerce</Link>
-          <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav ms-auto">
-              <Link to="/pages/Home" className="me-4 link">Home</Link>
-              <Link to="/pages/Shop" className="me-4 link">Shop</Link>
-              <Link onClick={() => setShowCart(!showCart)}><i className="fa-solid fa-cart-shopping"></i></Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+      
+      <Navbar
+        toggleCart={() => setShowCart(!showCart)}
+        itemsCount={cartItems.length}
+      />
+      <Cart
+        
+        cartItems={cartItems}
+        showCart={showCart}
+        
+        forceUpdate={forceUpdate}
+        setCartItems={setCartItems}
+        setForceUpdate={setForceUpdate}
+        totalPrice={totalPrice}
+      />
+      {/*
       <div className="cart border" style={{display: showCart ? "block" : "none", overflow: "auto"}}>
         {cartItems.map((item, i) => 
             <div key={i} className="d-flex border">
@@ -92,9 +104,10 @@ function App() {
               </div>
             </div>
         )}
-      </div>
+                    </div>*/}
 
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/pages/Home" element={<Home />} />
         <Route path="/pages/Shop" element={<Shop />} />
         <Route path="/pages/Shop/:id" element={<SingleProduct addItem={updateCart} />} />
