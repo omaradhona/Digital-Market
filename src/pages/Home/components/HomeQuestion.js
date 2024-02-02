@@ -14,12 +14,16 @@ export function HomeQuestion(props){
                     <i className={isActive ? "fa-solid fa-angle-up h1" : "fa-solid fa-angle-down h1"}>
                     </i>
                 </span>
-                <p style={{
-                    fontSize: isActive ? "16px" : "0px",
-                    transition: "0.2s",
+                <div style={{
+                    maxHeight: isActive ? "300px" : "0px",
+                    transition: "0.3s",
+                    overflow: "hidden",
                 }}>
-                    {props.answer}
-                </p>
+                    <p>
+                        {props.answer}
+                    </p>
+                </div>
+                
             </div>
         </>
     )

@@ -1,0 +1,13 @@
+.footer h3{
+    border-bottom: 3px solid black;
+}
+
+.footer i{
+    font-size: 70px;
+    
+}
+
+.social{
+    column-gap: 90px;
+    row-gap: 40px;
+}

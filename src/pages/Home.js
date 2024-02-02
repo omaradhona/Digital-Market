@@ -18,9 +18,9 @@ export function Home(){
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
             </div>
-            <div className="m-5">
+            <div className="m-2">
                 <h1 className="py-5 text-center fw-bold">What we sell</h1>
-                <div className="container-fluid d-flex flex-wrap our-categories">
+                <div className="container-fluid d-flex flex-wrap our-categories border">
                     
                     <HomeCategory
                         category="MEN'S CLOTHING"
@@ -63,7 +63,7 @@ export function Home(){
                 />
             </div>
 
-            <div>
+            <div className="my-5">
                 <h1 className="py-5 text-center fw-bold">F.A.Qs</h1>
                 <div className="d-flex flex-column justify-content-center">
                     <HomeQuestion

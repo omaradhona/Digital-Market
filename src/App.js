@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import { SingleProduct } from './pages/SingleProduct';
 import { Navbar } from './components/Navbar';
 import { Cart } from './components/Cart';
+import { Footer } from './components/Footer';
 import "./App.css";
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
         setForceUpdate={setForceUpdate}
         totalPrice={totalPrice}
       />
+      
       {/*
       <div className="cart border" style={{display: showCart ? "block" : "none", overflow: "auto"}}>
         {cartItems.map((item, i) => 
@@ -113,6 +115,7 @@ function App() {
         <Route path="/pages/Shop/:id" element={<SingleProduct addItem={updateCart} />} />
       </Routes>
       
+      <Footer />
     </>
   )
 }

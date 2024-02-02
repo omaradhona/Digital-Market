@@ -4,7 +4,12 @@ export function Cart(props){
   
 
   return (
-    <div className="cart border" style={{ width: props.showCart ? "500px" : "0", overflow: "auto" }}>
+    <div className="cart d-flex flex-column"
+        style={{ 
+          width: props.showCart ? "500px" : "0",
+          overflow: "auto",
+        }}>
+      <div className="cart-items-section">
       {props.cartItems.map((item, i) =>
         <div key={i} className="d-flex border p-2">
           <div className="cart-img bg-white col-3 text-center d-flex justify-content-center">
@@ -53,8 +58,10 @@ export function Cart(props){
           
         </div>
       )}
-      <div className="text-end total-price">
-        Total Price : {props.totalPrice.toPrecision(5)}
+      </div>
+      <div className="text-end total-price d-flex flex-column">
+        <span className="mb-3 me-2 fw-bold fs-5">Total Price : ${props.totalPrice.toPrecision(5)}</span>
+        <button className="btn btn-primary col-8 mx-auto">BUY</button>
       </div>
       
     </div>
