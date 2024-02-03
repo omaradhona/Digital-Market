@@ -7,7 +7,7 @@ export function HomeCategory(props){
 
     return (
         <>
-        <div className="col-md-4 position-relative"
+        <div className="col-sm-6 col-md-4 position-relative"
             onMouseOver={() => setIsHidden(false)}
             onMouseLeave={() => setIsHidden(true)}>
             <div>

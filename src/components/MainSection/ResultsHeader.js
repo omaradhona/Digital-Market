@@ -13,7 +13,7 @@ export function ResultsHeader(props){
                     <span onClick={props.tolist} className="me-3"><i className="bi bi-list-task"></i>List</span>
                 </div>
             </div>
-            <hr className="products-divider border-0" />
+            <hr className="my-divider border-0" />
         </>
     )
 }

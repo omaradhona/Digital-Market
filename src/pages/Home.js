@@ -21,7 +21,6 @@ export function Home(){
             <div className="m-2">
                 <h1 className="py-5 text-center fw-bold">What we sell</h1>
                 <div className="container-fluid d-flex flex-wrap our-categories border">
-                    
                     <HomeCategory
                         category="MEN'S CLOTHING"
                         bgImage={men}

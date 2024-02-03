@@ -10,22 +10,37 @@ nav a{
 
 .navbar{
     height: 59px;
+    z-index: 1;
 }
 
 .navbar-nav{
     overflow-y: hidden;
 }
 
-.navbar-nav .link:hover{
-    border-bottom: 2px solid white;
-    transition: 0.3s;
-}
+
+
+
 
 .site-title{
     font-size: 25px;
 }
 
+@media screen and (min-width: 576px){
+    .navbar-nav .link:hover{
+        border-bottom: 2px solid white;
+        transition: 0.3s;
+    }
+    .navbar-nav .link{
+        margin-right: 25px;
+    }
+    
+}
+
 @media screen and (max-width: 576px){
+    nav > div{
+        background-color: #dc3545;
+        padding-bottom: 8px;
+    }
     .navbar-nav{
         text-align: center;
     }
@@ -34,6 +49,16 @@ nav a{
         background-color: antiquewhite;
         margin: 4px 0;
         border-radius: 4px;
+    }
+    .navbar-nav a:hover{
+        color: white;
+        background-color: black;
+    }
+    .cart-items-count{
+        color: white;
+    }
+    .cart-items-count:hover{
+        background-color: white;
     }
 }
 

@@ -11,13 +11,18 @@ export function Navbar(props){
                 </button>
                 <div className="collapse navbar-collapse align-self-center" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto d-flex align-self-center">
-                        <Link to="/pages/Home" className="me-4 link">Home</Link>
-                        <Link to="/pages/Shop" className="me-4 link">Shop</Link>
+                        <Link to="/pages/Home" className="link">Home</Link>
+                        <Link to="/pages/Shop" className="link">Shop</Link>
                         <Link onClick={props.toggleCart}>
                             <i className="fa-solid fa-cart-shopping">
-                                
                             </i>
-                            <span className="cart-items-count">{props.itemsCount}</span>
+                            <span className="cart-items-count"
+                                style={{
+                                    opacity: props.itemsCount > 0 ? "1" : "0",
+                                    transition: "0.3s",
+                                }}>
+                                {props.itemsCount}
+                            </span>
                         </Link>
                     </div>
                 </div>

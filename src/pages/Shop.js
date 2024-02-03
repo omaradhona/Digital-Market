@@ -18,7 +18,7 @@ export function Shop() {
   const [minRate, setMinRate] = useState(0);
   const [activeStars, setActiveStars] = useState(null);
   const [defaultMaxPrice, setDefaultMaxPrice] = useState(null);
-  const [itemsFound, setItemsFound] = useState();
+  const [itemsFound, setItemsFound] = useState(0);
 
   
 
@@ -116,8 +116,8 @@ export function Shop() {
         toggleCategory={toggleCategory}
         activeCategoryIndex={activeCategoryIndex}
       />
-      <div className="container-fluid mt-2">
-        <div className="row">
+      <div className="container-fluid mt-2 mb-5">
+        <div className="row pb-5">
           <div className="col-md-3">
             <FiltersSection
               toggleRate={setMinRate}

@@ -4,11 +4,15 @@ export function Cart(props){
   
 
   return (
-    <div className="cart d-flex flex-column"
+    <div className="cart d-flex flex-column pb-2"
         style={{ 
           width: props.showCart ? "500px" : "0",
           overflow: "auto",
         }}>
+      <div className="text-end p-3">
+        <i className="fa-solid fa-x hide-cart"
+          onClick={() => props.setShowCart(!props.showCart)}></i>
+      </div>
       <div className="cart-items-section">
       {props.cartItems.map((item, i) =>
         <div key={i} className="d-flex border p-2">
@@ -59,9 +63,11 @@ export function Cart(props){
         </div>
       )}
       </div>
+      
       <div className="text-end total-price d-flex flex-column">
-        <span className="mb-3 me-2 fw-bold fs-5">Total Price : ${props.totalPrice.toPrecision(5)}</span>
-        <button className="btn btn-primary col-8 mx-auto">BUY</button>
+        <hr className="my-divider border-0 bg-white w-75 mx-auto mb-0" />
+        <span className="me-2 fw-bold fs-5 my-auto mb-1">Total Price : ${props.totalPrice.toPrecision(5)}</span>
+        <button className="btn btn-primary col-8 mx-auto mb-1">BUY</button>
       </div>
       
     </div>

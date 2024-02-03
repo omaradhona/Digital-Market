@@ -1,10 +1,24 @@
+@media screen and (max-width: 576px){
+    .cart{
+        
+        height: 100vh;
+        top: 0;
+        right: 0px;
+    }
+}
 
+@media screen and (min-width: 576px){
+    .cart{
+        height: 80vh;
+        right: 0;
+        top: 60px;
+    }
+}
 
 .cart{
-    height: 80vh;
+    
     position: absolute;
-    right: 0;
-    top: 60px;
+    
     background-color: black;
     color: white;
     z-index: 1;
@@ -31,4 +45,15 @@
 .cart-items-section{
     height: 80%;
     overflow-y: auto;
+}
+
+.cart .my-divider{
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+    
+}
+
+i.hide-cart{
+    font-size: 60px;
+    cursor: pointer;
 }

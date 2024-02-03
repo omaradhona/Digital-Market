@@ -53,11 +53,12 @@ function App() {
         toggleCart={() => setShowCart(!showCart)}
         itemsCount={cartItems.length}
       />
+
       <Cart
         
         cartItems={cartItems}
         showCart={showCart}
-        
+        setShowCart={setShowCart}
         forceUpdate={forceUpdate}
         setCartItems={setCartItems}
         setForceUpdate={setForceUpdate}
