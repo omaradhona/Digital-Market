@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { Stars } from "./FiveStars/Stars";
 
 export function FiveStars(props){
     const [stars, setStars] = useState([]);
 
-    for(var i=0; i < 5; i++){
-        if(i === 0 && stars.length > 0){
+    for(var i = props.firstIteration; i < 5; i++){
+        if(i === props.firstIteration && stars.length > 0){
             setStars([]);
         }
-        if(i < props.index){
+        if(i < props.colorfulStars){
             stars.push("fas");
         }
         else{
@@ -16,5 +15,5 @@ export function FiveStars(props){
         }
     }
     
-    return stars.map((star, i) => <Stars key={i} rating={stars[i]} />)
+    return stars.map((star, i) => <span key={i} className={stars[i] + " fa-star"}></span>)
 }

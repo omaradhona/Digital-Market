@@ -1,34 +1,13 @@
-/*-------------------------------------------------------------------------------------------------------------
-                  *   *   *   *   *    SECTION   *   *   *   *   *
--------------------------------------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Lato:200,300,400,400i,700");
 
+body{
+    font-family: "lato";
+}
 
+.custom-bg{
+    background-color: rgb(221, 84, 84);
+}
 
-
-/*
-@media screen and (max-width: 600px) {
-    nav{
-        
-        text-align: center;
-        
-    }
-    .site-logo{
-        
-        
-        display: none;
-    }
-    ul{
-        gap: 0px;
-        width: 100%;
-        
-    }
-    li a{
-        background-color: black;
-        display: block;
-        width: 100%;
-    }
-    li a:hover{
-        background-color: darkgray;
-    }
-    
-  }*/
+.custom-color{
+    color: rgb(221, 84, 84);
+}

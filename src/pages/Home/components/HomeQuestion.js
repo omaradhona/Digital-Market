@@ -7,7 +7,11 @@ export function HomeQuestion(props){
         <>
             <div className="mx-auto px-5 w-75">
                 <span className="d-flex align-items-center faq-element mb-3"
-                    onClick={() => setIsActive(!isActive)}>
+                    onClick={() => setIsActive(!isActive)}
+                    style={{
+                        color: isActive ? "#377cf2" : "",
+                        borderBottom: isActive ? "3px solid #377cf2" : "3px solid",
+                    }}>
                     <h1 className="me-auto">
                         {props.question}
                     </h1>
@@ -23,7 +27,6 @@ export function HomeQuestion(props){
                         {props.answer}
                     </p>
                 </div>
-                
             </div>
         </>
     )

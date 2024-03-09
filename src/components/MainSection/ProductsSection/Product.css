@@ -1,3 +1,12 @@
+.card{
+    transition: 0.3s;
+}
+
+.card:hover{
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.438);
+    transition: 0.3s;
+}
+
 .card-body img{
     width: 190px;
     height: 190px;
@@ -31,17 +40,20 @@
     height: 125px;
 }
 
+.grid .img-top, .crammed .img-top, .list .img-top{
+    transition: 0.3s;
+}
+
+.grid .img-top:hover, .crammed .img-top:hover, .list .img-top:hover{
+    transform: scale(1.1, 1.1);
+    transition: 0.3s;
+}
+
 .card .fas{
     color: #edf109;
 }
 
 .grid .btn, .list .btn, .crammed .btn{
-    background-color: red;
-    transition: 0.2s;
-}
-
-.grid .btn:hover, .list .btn:hover, .crammed .btn:hover{
-    transform: scale(1.1, 1.1);
     background-color: red;
     transition: 0.2s;
 }

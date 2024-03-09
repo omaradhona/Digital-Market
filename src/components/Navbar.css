@@ -17,10 +17,6 @@ nav a{
     overflow-y: hidden;
 }
 
-
-
-
-
 .site-title{
     font-size: 25px;
 }
@@ -33,12 +29,10 @@ nav a{
     .navbar-nav .link{
         margin-right: 25px;
     }
-    
 }
 
 @media screen and (max-width: 576px){
     nav > div{
-        background-color: #dc3545;
         padding-bottom: 8px;
     }
     .navbar-nav{

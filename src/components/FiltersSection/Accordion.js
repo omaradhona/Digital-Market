@@ -2,9 +2,9 @@ import './Accordion.css'
 
 export function Accordion(props){
     return (
-        <div className="accordion-item">
+        <div className="accordion-item col-md-12 col-sm-5 col-8">
             <h2 className="accordion-header" id={props.id}>
-                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={"#"+props.target} aria-expanded="true" aria-controls={props.target}>
+                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={"#" + props.target} aria-expanded="true" aria-controls={props.target}>
                     {props.title}
                 </button>
             </h2>

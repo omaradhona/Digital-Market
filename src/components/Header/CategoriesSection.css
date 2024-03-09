@@ -1,3 +1,9 @@
+  @media screen and (max-width: 576px){
+    .categories{
+      margin-top: 26px;
+    }
+  }
+  
   .categories{
     background-color: #1e1f26;
   }
@@ -18,12 +24,13 @@
 
   .categories > .is-active{
     background-color: red;
-
   }
 
   .stock.inactive{
+    /*
     position: relative;
     left: 15px;
+    */
     border: 1px solid red;
     border-radius: 10px;
     color: red;
@@ -31,8 +38,10 @@
   }
 
   .stock.is-active{
+    /*
     position: relative;
     left: 15px;
+    */
     border: 1px solid white;
     border-radius: 10px;
     color: white;

@@ -1,4 +1,4 @@
-import { CategoriesSection } from './Header/CategoriesSection'
+import { CategoriesSection } from './Header/CategoriesSection';
 
 export function Header(props){
     return (

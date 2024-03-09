@@ -1,0 +1,28 @@
+@media screen and (max-width: 768px){
+    .toggle-filters{
+        background-color: rgb(69, 103, 214);
+    }
+    .accordion{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .accordion-item{
+        margin: 12px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .toggle-filters{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .accordion{
+        justify-content: center;
+        align-items: center;
+    }
+}

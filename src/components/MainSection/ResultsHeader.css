@@ -1,19 +1,13 @@
+.items-found{
+    font-weight: bold;
+}
+
 .views span{
     cursor: pointer;
 }
 
-.views i{
-    margin-right: 6px;
-    display: inline-block;
-    vertical-align: 2px;
-}
-
 .views span:hover{
     color: red;
-}
-
-.items-found{
-    font-weight: bold;
 }
 
 .my-divider{

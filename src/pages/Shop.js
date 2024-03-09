@@ -2,14 +2,14 @@ import { useState, useEffect, useRef} from 'react'
 import { Header } from '../components/Header'
 import { FiltersSection } from '../components/FiltersSection';
 import { MainSection } from '../components/MainSection';
+import { Footer } from '../components/Footer';
 
-
-export function Shop() {
+export function Shop(props) {
   const [products, setProducts] = useState(null);
   const [sortedProducts, setSortedProducts] = useState(null);
   const categories = ["all", "men's clothing", "jewelery", "electronics", "women's clothing"];
-  const [category, setCategory] = useState(categories[0]);
-  const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
+  const [category, setCategory] = useState(categories[props.category]);
+  const [activeCategoryIndex, setActiveCategoryIndex] = useState(props.category);
   const [view, setView] = useState("grid");
   const [forceUpdate, setForceUpdate] = useState(false);
   const [filterBy, setFilterBy] = useState("price");
@@ -20,8 +20,6 @@ export function Shop() {
   const [defaultMaxPrice, setDefaultMaxPrice] = useState(null);
   const [itemsFound, setItemsFound] = useState(0);
 
-  
-
   useEffect(() => {
     function fetchProducts(){
         let defaultMaxPrice = 0;
@@ -30,7 +28,6 @@ export function Shop() {
             .then(json => {
                 setProducts(json);
                 setSortedProducts(json);
-                console.log(json);
                 json.map(product => {
                     if(product.price > defaultMaxPrice){
                         defaultMaxPrice = product.price;
@@ -38,7 +35,6 @@ export function Shop() {
                 })
                 setMaxPrice(defaultMaxPrice);
                 setDefaultMaxPrice(defaultMaxPrice);
-                console.log(maxPrice);
             })     
     }
 
@@ -61,7 +57,6 @@ export function Shop() {
   function toggleCategory(i){
     setActiveCategoryIndex(i);
     setCategory(categories[i]);
-    
   }
 
   function toAscending(){
@@ -143,6 +138,7 @@ export function Shop() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

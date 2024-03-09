@@ -1,4 +1,4 @@
-import "./ResultsHeader.css"
+import "./ResultsHeader.css";
 
 export function ResultsHeader(props){
     return (
@@ -8,9 +8,15 @@ export function ResultsHeader(props){
                     {props.itemsFound + " Items found"}
                 </span>
                 <div className="d-flex views">
-                    <span onClick={props.toCrammed} className="me-5"><i className="bi bi-grid-3x3-gap"></i>Crammed</span>
-                    <span onClick={props.toGrid} className="me-5"><i className="bi bi-grid"></i>Grid</span>
-                    <span onClick={props.tolist} className="me-3"><i className="bi bi-list-task"></i>List</span>
+                    <span onClick={props.toCrammed} className="me-5">
+                        <i className="bi bi-grid-3x3-gap"></i>
+                    </span>
+                    <span onClick={props.toGrid} className="me-5">
+                        <i className="bi bi-grid"></i>
+                    </span>
+                    <span onClick={props.tolist} className="me-3">
+                        <i className="bi bi-list-task"></i>
+                    </span>
                 </div>
             </div>
             <hr className="my-divider border-0" />
