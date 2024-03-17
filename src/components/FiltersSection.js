@@ -42,6 +42,5 @@ export function FiltersSection(props){
                 />
             </div>
         </>
-        
     )
 }

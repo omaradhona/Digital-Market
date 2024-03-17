@@ -5,7 +5,9 @@ export function Navbar(props){
     return (
         <nav className="navbar d-flex align-items-center navbar-expand-sm custom-bg">
             <div className="container-fluid align-items-stretch align-self-center custom-bg">
-                <Link to="/pages/Home" className="site-title fw-bold">E-commerce</Link>
+                <Link to="/pages/Home" className="site-title">
+                    <span>Digital</span> Market
+                </Link>
                 <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

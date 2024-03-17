@@ -71,7 +71,7 @@ export function Home(props){
                 <div className="d-flex justify-content-evenly flex-wrap gap-5">
                     {products && products.filter((e, i) => i < 4).map((item, index) =>
                         <div key={index} className="col-lg-2 col-md-5 col-sm-7 col-8">
-                            <div key={item.id}
+                            <Link to={"/pages/Shop/" + item.id} key={item.id}
                                 className="d-flex justify-content-center align-items-center trending-item 
                                  p-3 position-relative">
                                 <img src={item.image} />
@@ -80,8 +80,10 @@ export function Home(props){
                                         {item.id === 2 ? ("SALE") : ("")}
                                         {item.id === 3 ? ("50% OFF") : ("")}
                                 </div>
-                            </div>
-                            <h5 className="fw-bold mt-2 trending-title">{item.title}</h5>
+                            </Link>
+                            <h5 className="fw-bold mt-2 trending-title product-link">
+                                <Link to={"/pages/Shop/" + item.id}>{item.title}</Link>
+                            </h5>
                             <h3 className="custom-color">${item.price}</h3>
                         </div>
                     )}

@@ -19,6 +19,11 @@ nav a{
 
 .site-title{
     font-size: 25px;
+    font-weight: 200;
+}
+
+.site-title span{
+    font-weight: bold;
 }
 
 @media screen and (min-width: 576px){

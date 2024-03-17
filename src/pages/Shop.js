@@ -142,5 +142,3 @@ export function Shop(props) {
     </div>
   );
 }
-
-
