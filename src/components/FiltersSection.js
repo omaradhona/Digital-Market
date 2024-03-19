@@ -3,11 +3,17 @@ import { FilterCheckboxes } from "./FiltersSection/FilterCheckboxes";
 import { FilterItems } from "./FiltersSection/FilterItems";
 import { FilterRatings } from "./FiltersSection/FilterRatings";
 import { PriceFilter } from "./FiltersSection/PriceFilter";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./FiltersSection.css";
 
 export function FiltersSection(props){
-    const [isShown, setIsShown] = useState(false);
+    const [isShown, setIsShown] = useState(true);
+
+    useEffect(() => {
+        if(window.innerWidth <= 768){
+            setIsShown(false);
+        }
+    }, [])
 
     return (
         <>
