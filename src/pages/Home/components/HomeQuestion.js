@@ -12,9 +12,9 @@ export function HomeQuestion(props){
                         color: isActive ? "#377cf2" : "",
                         borderBottom: isActive ? "3px solid #377cf2" : "3px solid",
                     }}>
-                    <h1 className="me-auto">
+                    <h3 className="me-auto">
                         {props.question}
-                    </h1>
+                    </h3>
                     <i className={isActive ? "fa-solid fa-angle-up h1" : "fa-solid fa-angle-down h1"}>
                     </i>
                 </span>
