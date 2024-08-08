@@ -110,9 +110,12 @@
 }
 
 .our-categories div{
-    height: 400px;
     transition: 0.3s;
     color: white;
+}
+
+.category{
+    height: 350px;
 }
 
 .our-categories div a{

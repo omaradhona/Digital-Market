@@ -92,7 +92,7 @@ export function Home(props){
 
             <div className="m-2 py-5 our-products">
                 <h1 className="mb-5 text-center text-white fw-bold">CATEGORIES</h1>
-                <div className="container d-flex flex-wrap justify-content-around row-gap-5 our-categories">
+                <div className="container-fluid d-flex flex-wrap justify-content-around row-gap-5 our-categories">
                     <HomeCategory
                         category="MEN"
                         bgImage={men}

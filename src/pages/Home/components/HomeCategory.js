@@ -9,7 +9,7 @@ export function HomeCategory(props){
         <div className="col-sm-10 col-md-5 position-relative rounded"
             onMouseOver={() => setIsHidden(false)}
             onMouseLeave={() => setIsHidden(true)}>
-            <div>
+            <div className="h-100">
                 <img src={props.bgImage} width="100%" height="100%" 
                     style={{
                         filter: isHidden ? "" : "brightness(50%)",
