@@ -16,7 +16,7 @@ export function Home(props){
     useEffect(() => {
         function fetchProducts(){
             fetch('https://fakestoreapi.com/products', {
-                mode: "no-cors",
+                mode: "cors",
                 headers: {
                     'Access-Control-Allow-Origin':'*'
                 }
