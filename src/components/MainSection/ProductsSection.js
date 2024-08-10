@@ -5,7 +5,7 @@ export function ProductsSection(props){
         <>
             {props.products && (props.category === "all"
                 ?
-                props.products.filter((product, i) => 
+                props.products.filter(product => 
                     product.price >= props.minPrice && product.price <= props.maxPrice &&
                     product.rating.rate >= props.minRate).map(product =>
                         <Product

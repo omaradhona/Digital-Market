@@ -3,10 +3,11 @@ import { Header } from '../components/Header'
 import { FiltersSection } from '../components/FiltersSection';
 import { MainSection } from '../components/MainSection';
 import { Footer } from '../components/Footer';
+import { productsData } from "../ProductsData"
 
 export function Shop(props) {
-  const [products, setProducts] = useState(null);
-  const [sortedProducts, setSortedProducts] = useState(null);
+  // const [products, setProducts] = useState(null);
+  const [sortedProducts, setSortedProducts] = useState(productsData);
   const categories = ["all", "men's clothing", "jewelery", "electronics", "women's clothing"];
   const [category, setCategory] = useState(categories[props.category]);
   const [activeCategoryIndex, setActiveCategoryIndex] = useState(props.category);
@@ -21,6 +22,20 @@ export function Shop(props) {
   const [itemsFound, setItemsFound] = useState(0);
 
   useEffect(() => {
+    let defaultMaxPrice = 0;
+    productsData.map(product => {
+      if(product.price > defaultMaxPrice){
+        defaultMaxPrice = product.price;
+      }
+    })
+    setMaxPrice(defaultMaxPrice);
+    setDefaultMaxPrice(defaultMaxPrice);
+    if(category === "all"){
+      setItemsFound(productsData.length)
+    }
+  }, [])
+
+  /* useEffect(() => {
     function fetchProducts(){
         let defaultMaxPrice = 0;
         fetch('/products')
@@ -40,7 +55,7 @@ export function Shop(props) {
 
     fetchProducts();
 
-  }, [])
+  }, []) */
   
   function toGrid(){
     setView("grid");

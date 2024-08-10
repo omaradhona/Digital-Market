@@ -4,6 +4,7 @@ import { FiveStars } from "../components/FiltersSection/FilterRatings/FiveStars"
 import { Review } from "./SingleProduct/Review";
 import { Footer } from "../components/Footer";
 import "./SingleProduct.css";
+import { productsData } from "../ProductsData"
 
 export function SingleProduct(props) {
     const { id } = useParams();
@@ -11,9 +12,16 @@ export function SingleProduct(props) {
     const [singleProduct, setSingleProduct] = useState(null);
     const [quantity, setQuantity] = useState(1);
 
+    useEffect(() => {
+        if(id){
+            const foundProduct = productsData.find(e => e.id === parseInt(id))
+            setSingleProduct(foundProduct)
+        }
+    }, [id])
+
     const btnRef = useRef();
 
-    useEffect(() => {
+    /* useEffect(() => {
         function fetchSingleProduct() {
             fetch(`/products/${id}`)
                 .then(res => res.json())
@@ -21,7 +29,7 @@ export function SingleProduct(props) {
         }
 
         fetchSingleProduct();
-    }, [])
+    }, []) */
 
     useEffect(() => {
         if (btnRef.current) {

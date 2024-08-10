@@ -9,9 +9,10 @@ import jewelery from "./Home/images/jewelery.jpg";
 import electronics from "./Home/images/electronics.jpeg";
 import women from "./Home/images/women.jpg";
 import { Footer } from "../components/Footer";
+import { productsData } from "../ProductsData"
 
 export function Home(props){
-    const [products, setProducts] = useState(null);
+    /* const [products, setProducts] = useState(null);
 
     useEffect(() => {
         function fetchProducts(){
@@ -23,7 +24,9 @@ export function Home(props){
         }
     
         fetchProducts();
-    }, [])
+    }, []) */
+
+    const products = productsData
 
     return (
         <>
