@@ -23,7 +23,7 @@ export function Shop(props) {
   useEffect(() => {
     function fetchProducts(){
         let defaultMaxPrice = 0;
-        fetch('https://fakestoreapi.com/products')
+        fetch('/products')
             .then(res => res.json())
             .then(json => {
                 setProducts(json);

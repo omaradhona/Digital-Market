@@ -15,7 +15,7 @@ export function SingleProduct(props) {
 
     useEffect(() => {
         function fetchSingleProduct() {
-            fetch(`https://fakestoreapi.com/products/${id}`)
+            fetch(`/products/${id}`)
                 .then(res => res.json())
                 .then(product => setSingleProduct(product))
         }
