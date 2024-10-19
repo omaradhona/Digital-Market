@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
-import { FiveStars } from "../components/FiltersSection/FilterRatings/FiveStars";
+import { FiveStars } from "./Shop/FiltersSection/FilterRatings/FiveStars";
 import { Review } from "./SingleProduct/Review";
 import { Footer } from "../components/Footer";
 import "./SingleProduct.css";

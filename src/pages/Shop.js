@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef} from 'react'
-import { Header } from '../components/Header'
-import { FiltersSection } from '../components/FiltersSection';
-import { MainSection } from '../components/MainSection';
+import { Header } from './Shop/Header'
+import { FiltersSection } from './Shop/FiltersSection';
+import { MainSection } from './Shop/MainSection';
 import { Footer } from '../components/Footer';
 import { productsData } from "../ProductsData"
 
